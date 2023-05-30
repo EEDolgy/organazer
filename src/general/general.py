@@ -9,7 +9,7 @@ def greetings():
 
 
 @general.route("/home")
-# @login_required
+@login_required
 def home():
     return render_template("general/home.html")
 
