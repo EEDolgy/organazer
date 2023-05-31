@@ -37,12 +37,12 @@
                 {% for category, message in messages %}
 
                     {% if category == 'error' %}
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <div class="alert alert-danger alert-dismissible fade show lead" role="alert">
                             {{message}}
                             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                         </div>
                     {% else %}
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <div class="alert alert-success alert-dismissible fade show lead" role="alert">
                             {{message}}
                             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                         </div>
@@ -51,7 +51,7 @@
                 {% endfor %}
         {% endif %}
     {% endwith %}
-    <div class="container">
+    <div class="container lead" align="center">
         {% block body %}{% endblock %}
     </div>
     <script
