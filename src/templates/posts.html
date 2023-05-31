@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div>
+    <a href="/add-note">
+        <button class="btn btn-dark" type="submit">
+            Create new note
+        </button>
+    </a>
+</div>
+</br>
+<h1 align="center">{% block header %}Posts{% endblock %}</h1>
+</br>
+<div>
+    {% for content in contents %}
+        <div class="card border-dark">
+            <div class="card-body">
+                {{content.content}}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

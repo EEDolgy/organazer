@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}New Note{% endblock %}
+
+{% block body %}
+<h2>Make a note</h2>
+</br>
+<form method="post">
+    <div class="form-group">
+        <textarea name="text" id="text" class="form-control">
+        </textarea>
+        </br>
+        <div align="center">
+            <button class="btn btn-dark" type="submit">Post</button>
+        </div>
+    </div>
+</form>
+{% endblock %}
