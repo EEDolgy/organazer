@@ -1,3 +1,32 @@
-{% extends "posts.html" %}
+{% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block body %}
+<div>
+    <a href="/add-note">
+        <button class="btn btn-dark" type="submit">
+            Create new note
+        </button>
+    </a>
+</div>
+</br>
+<h1 align="center">Notes</h1>
+</br>
+<div>
+    {% for note in notes %}
+        <div class="card border-dark">
+            <div class="card-header justify-content-between d-flex">
+                <div class="">
+                    <little>{{note.date_created}}</little>
+                </div>
+                <div>
+                    tecsfjytjtyjtyysdf
+                </div>
+            </div>
+            <div class="card-body">
+                {{note.text}}
+            </div>
+        </div>
+        </br>
+    {% endfor %}
+</div>
+{% endblock %}
