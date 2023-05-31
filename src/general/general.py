@@ -5,11 +5,11 @@ general = Blueprint("general", __name__, template_folder='templates')
 
 @general.route("/")
 def greetings():
-    return render_template("general/greetings.html")
+    return render_template("general/greetings.html", user=current_user)
 
 
 @general.route("/home")
 @login_required
 def home():
-    return render_template("general/home.html")
+    return render_template("general/home.html", user=current_user)
 
